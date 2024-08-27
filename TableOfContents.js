@@ -22,7 +22,7 @@ export default class TableOfContents {
    */
   static fromXml(doc) {
     let selectors = Array.from(arguments).map((arg) =>
-      arg.toLowerCase().trim()
+      typeof arg === "string" ? arg.toLowerCase().trim() : arg
     );
     selectors.shift();
 
